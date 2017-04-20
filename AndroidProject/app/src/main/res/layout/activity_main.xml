@@ -6,6 +6,33 @@
     android:layout_height="match_parent"
     tools:context="diegoycarlos.uclm.voicerecog.MainActivity">
 
+    <TextView
+        android:id="@+id/txtGrabarVoz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/jsonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txtText"
+        android:layout_marginTop="95dp"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/txtText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="77dp"
+        android:layout_below="@+id/txtGrabarVoz"
+        android:layout_alignParentStart="true" />
+
     <ImageButton
         android:id="@+id/img_btn_hablar"
         android:layout_width="wrap_content"
@@ -15,16 +42,8 @@
         android:onClick="onClickImgBtnHablar"
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="154dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtGrabarVoz"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textSize="30dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="38dp" />
 
 </RelativeLayout>
