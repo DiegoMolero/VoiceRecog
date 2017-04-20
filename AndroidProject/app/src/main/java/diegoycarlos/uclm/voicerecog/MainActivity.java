@@ -4,27 +4,32 @@ import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.speech.RecognizerIntent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.ArrayList;
 
-public class MainActivity extends Activity {
+import ai.wit.sdk.IWitListener;
+import ai.wit.sdk.Wit;
+import ai.wit.sdk.model.WitOutcome;
+
+public class MainActivity extends Activity implements IWitListener {
 
     TextView grabar;
     String strSpeech2Text;
+    Wit _wit;
 
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        grabar = (TextView) findViewById(R.id.txtGrabarVoz);
+        String accessToken = "YOUR CLIENT ACCESS TOKEN HERE";
+        _wit = new Wit(accessToken, this);
+        _wit.enableContextLocation(getApplicationContext());
     }
 
     @Override
@@ -68,5 +73,31 @@ public class MainActivity extends Activity {
                     Toast.LENGTH_SHORT).show();
         }
 
+
+    }
+
+    @Override
+    public void witDidGraspIntent(ArrayList<WitOutcome> arrayList, String s, Error error) {
+
+    }
+
+    @Override
+    public void witDidStartListening() {
+
+    }
+
+    @Override
+    public void witDidStopListening() {
+
+    }
+
+    @Override
+    public void witActivityDetectorStarted() {
+
+    }
+
+    @Override
+    public String witGenerateMessageId() {
+        return null;
     }
 }
