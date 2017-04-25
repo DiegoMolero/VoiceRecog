@@ -19,6 +19,9 @@ public class Entities {
     @SerializedName(value ="intentTipoHamburguesa")
     private List<IntentTipoHamburguesa> intentTipoHamburguesa = new ArrayList<IntentTipoHamburguesa>();
 
+    @SerializedName(value ="intentTipoPizza")
+    private List<IntentTipoPizza> intentTipoPizza = new ArrayList<IntentTipoPizza>();
+
     public List<IntentTipoComida> getIntentTipoComida() {
         return intentTipoComida;
     }
@@ -43,9 +46,9 @@ public class Entities {
         this.intentTipoPizza = intentTipoPizza;
     }
 
-    @SerializedName(value ="intentTipoPizza")
 
-    private List<IntentTipoPizza> intentTipoPizza = new ArrayList<IntentTipoPizza>();
+
+
 
     public List<Number> getNumber() {
         return number;

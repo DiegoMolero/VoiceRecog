@@ -6,8 +6,18 @@ package diegoycarlos.uclm.voicerecog.Comida;
 
 public class Comida {
     protected String tipo;
+    protected int amount;
 
-    public Comida(String tipo) {
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public Comida(String tipo, int amount) {
+        this.amount = amount;
         this.tipo = tipo;
     }
 

@@ -1,6 +1,7 @@
 package diegoycarlos.uclm.voicerecog.Comida;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 
@@ -9,18 +10,28 @@ import java.util.List;
  */
 
 public class Pedido {
-    private List<Comida> lista;
+    private ArrayList<Comida> lista;
 
     public Pedido() {
         lista = new ArrayList<Comida>();
     }
 
-    public List<Comida> getLista() {
+    public ArrayList<Comida>getLista() {
         return lista;
-
     }
-
-    public void setLista(List<Comida> lista) {
+    public void setLista(ArrayList<Comida> lista) {
         this.lista = lista;
+    }
+    public void addComida(Comida a){
+        lista.add(a);
+    }
+    public Comida getComida(int i){
+        return lista.get(i);
+    }
+    public int getSize(){
+        return lista.size();
+    }
+    public void removeComida(int position){
+        lista.remove(position);
     }
 }

@@ -5,8 +5,6 @@ package diegoycarlos.uclm.voicerecog.Comida;
  */
 
 public class Pizza extends  Comida{
-    private String tipo; //barbacoa,margarita,vegetal,bacon,cuatro quesos
-
     @Override
     public String getTipo() {
         return tipo;
@@ -17,7 +15,14 @@ public class Pizza extends  Comida{
         this.tipo = tipo;
     }
 
-    public Pizza(String tipo) {
-        super(tipo);
+    public Pizza(String tipo,int amount) {
+        super(tipo,amount);
+    }
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 }

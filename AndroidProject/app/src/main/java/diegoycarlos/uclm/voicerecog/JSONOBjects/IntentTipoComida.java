@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class IntentTipoComida {
+
     @SerializedName("confidence")
     public String confidence;
 

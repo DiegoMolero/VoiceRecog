@@ -5,7 +5,14 @@ package diegoycarlos.uclm.voicerecog.Comida;
  */
 
 public class Hamburguesa extends Comida{
-    private String tipo; //pollo y ternera(carne o vacuno)
+
+    public int getAmount() {
+        return amount;
+    }
+
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
 
     @Override
     public String getTipo() {
@@ -17,7 +24,7 @@ public class Hamburguesa extends Comida{
         this.tipo = tipo;
     }
 
-    public Hamburguesa(String tipo) {
-        super(tipo);
+    public Hamburguesa(String tipo,int amount) {
+        super(tipo,amount);
     }
 }
