@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/maderarana"
+    android:background="@drawable/fondito"
     tools:context="diegoycarlos.uclm.voicerecog.MainActivity">
 
     <LinearLayout
